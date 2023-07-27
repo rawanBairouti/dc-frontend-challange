@@ -17,6 +17,7 @@
 }
 
 .sale__text h2 {
+	font-family: 'DM Sans', sans-serif;
 	font-size: 3rem;
 	font-weight: 700;
 	color: var(--orange);
@@ -25,6 +26,7 @@
 }
 
 .sale__text h1 {
+	font-family: 'DM Sans', sans-serif;
 	font-size: 4rem;
 	font-weight: 700;
 	margin-block-end: 1.25rem;
@@ -32,6 +34,7 @@
 }
 
 .sale__text h4 {
+	font-family: 'Inter';
 	font-size: 1.25em;
 	font-weight: 400;
 	line-height: 150%;
@@ -45,6 +48,7 @@
 	margin-block-start: auto;
 	align-self: flex-start;
 	text-align: center;
+	font-family: 'Inter';
 	font-size: 1.125rem;
 	font-weight: 700;
 	line-height: 111%;

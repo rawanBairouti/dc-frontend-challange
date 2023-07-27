@@ -1,7 +1,8 @@
-import Footer from './Footer'
-import Header from './Header'
+import Footer from './Footer';
+import Header from './Header';
+import Sale from './Sale';
+import Products from './Prouducts';
 import './Root.css'
-import Sale from './Sale'
 
 export default function Root() {
 
@@ -10,6 +11,7 @@ export default function Root() {
       <Header />
       <main>
         <Sale />
+        <Products />
       </main>
       <Footer />
     </div>

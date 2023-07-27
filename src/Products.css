@@ -1,0 +1,11 @@
+.products {
+	font-family: 'DM Sans', sans-serif;
+	margin-inline: 162px;
+	margin-block-start: 4rem;
+}
+
+.products__container {
+	margin-block-start: 2rem;
+	display: flex;
+	gap: 1.5rem;
+}
