@@ -1,0 +1,52 @@
+.sale {
+	background-color: var(--hero-bg);
+	display: flex;
+	justify-content: space-between;
+	gap: 1.5rem;
+	border-radius: 48px;
+	min-width: 1064px;
+	min-height: 427px;
+	margin-block-start: 32px;
+	margin-inline: 162px;
+	padding: 64px;
+}
+
+.sale__text {
+	display: flex;
+	flex-direction: column;
+}
+
+.sale__text h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	color: var(--orange);
+	margin-block-end: 0.5rem;
+	margin-inline-start: 5px;
+}
+
+.sale__text h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	margin-block-end: 1.25rem;
+	margin-inline-start: 5px;
+}
+
+.sale__text h4 {
+	font-size: 1.25em;
+	font-weight: 400;
+	line-height: 150%;
+	color: var(--dark-grey);
+	margin-inline-start: 5px;
+}
+
+.sale__text button {
+	color: var(--white);
+	background-color: var(--black);
+	margin-block-start: auto;
+	align-self: flex-start;
+	text-align: center;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 111%;
+	padding: 20px 80px;
+}

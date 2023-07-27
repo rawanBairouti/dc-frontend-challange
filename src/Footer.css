@@ -1,0 +1,25 @@
+footer {
+	background-color: var(--black);
+	display: flex;
+	justify-content: space-between;
+	padding-block: 20px;
+	padding-inline: 162px;
+	margin-block-start: auto;
+}
+
+footer .logo {
+	color: var(--white);
+}
+
+.rights {
+	color: var(--footer-text);
+	font-size: 0.8750em;
+	line-height: 172%;
+	opacity: 0.7;
+	font-weight: 400;
+}
+
+.socials {
+	display: flex;
+	gap: 1em;
+}

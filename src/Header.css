@@ -1,17 +1,18 @@
-.header {
+header {
 	padding-block: 20px;
 	padding-inline: 162px;
-	height: 4em;
-	border-bottom: 2px solid var(--line-light-grey, #E9EBEE);
+	min-width: 1388px;
+	height: 4.4em;
+	border-bottom: 2px solid var(--line-light-grey);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 0.875em;
+	font-size: 0.875rem;
 	font-weight: 700;
 }
 
 .logo {
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 600;
 	line-height: 150%;
 	display: flex;
@@ -21,9 +22,9 @@
 button {
 	display: flex;
 	border-radius: 8px;
-	border: 1px solid var(--black, #201B21);
-	background-color: var(--white, #FFFFFF);
-	padding: 8px 24px;
+	border: 1px solid var(--black);
+	background-color: var(--white);
+	padding: 0.5em 1.5em;
 	align-items: center;
-	gap: 10px;
+	gap: 0.625em;
 }

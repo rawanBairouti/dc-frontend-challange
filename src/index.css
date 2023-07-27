@@ -13,9 +13,11 @@
   --orange: #EC5E2A;
   --white: #FFFFFF;
   --hero-bg: #EAEEEF;
-  
+
   margin: 0;
-	font-family: 'Inter';
+  font-family: 'Inter';
+
+  /* outline: 1px solid red; */
 }
 
 html,
