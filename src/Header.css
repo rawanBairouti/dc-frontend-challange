@@ -1,0 +1,29 @@
+.header {
+	padding-block: 20px;
+	padding-inline: 162px;
+	height: 4em;
+	border-bottom: 2px solid var(--line-light-grey, #E9EBEE);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.875em;
+	font-weight: 700;
+}
+
+.logo {
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 150%;
+	display: flex;
+	gap: 10px;
+}
+
+button {
+	display: flex;
+	border-radius: 8px;
+	border: 1px solid var(--black, #201B21);
+	background-color: var(--white, #FFFFFF);
+	padding: 8px 24px;
+	align-items: center;
+	gap: 10px;
+}
