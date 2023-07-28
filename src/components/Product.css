@@ -1,0 +1,28 @@
+.product img {
+	border-radius: 18px;
+	width: 261px;
+	height: 284px;
+	margin-block-end: 1.125em;
+}
+
+.product__info h4 {
+	font-weight: 700;
+	font-size: 1.250em;
+	line-height: 120%;
+}
+
+.product__info h5 {
+	font-family: 'Inter';
+	color: var(--dark-grey);
+	font-weight: 400;
+	font-size: 1em;
+	margin-block: 0.375em 0.875em;
+}
+
+.product__info .price {
+		font-family: DM Sans;
+		font-size: 1.125em;
+		font-weight: 500;
+		line-height: 134%;
+		letter-spacing: -0.5px;
+}

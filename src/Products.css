@@ -6,6 +6,8 @@
 
 .products__container {
 	margin-block-start: 2rem;
+	margin-block-end: 7rem;
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1.5rem;
 }
