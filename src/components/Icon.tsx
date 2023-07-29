@@ -1,7 +1,7 @@
 import { ReactComponent as logo } from '../assets/logo.svg';
 import { ReactComponent as cart } from '../assets/cart.svg';
 import { ReactComponent as arrowRight } from '../assets/arrow-right.svg';
-import { ReactComponent as chevronRight } from '../assets/cart.svg';
+import { ReactComponent as chevronRight } from '../assets/chevron-right.svg';
 import { ReactComponent as chevronLeft } from '../assets/chevron-left.svg';
 import { ReactComponent as plus } from '../assets/plus.svg';
 import { ReactComponent as minus } from '../assets/minus.svg';

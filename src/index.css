@@ -53,6 +53,15 @@ h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+
+  &:visited,
+  &:link {
+    color: inherit;
+  }
+}
+
 #root {
   isolation: isolate;
 }
