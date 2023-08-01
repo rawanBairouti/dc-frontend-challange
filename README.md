@@ -1,4 +1,4 @@
-How to Run the App
+## How to Run the App
 
 To run this app, please ensure Node.js and npm are installed on your machine, then follow the steps below:
 
