@@ -16,7 +16,7 @@ export default function Products() {
             <Product
                 key={product.name}
                 id={product.id}
-                image={product.mainImage}
+                mainImage={product.mainImage}
                 brand={product.brand}
                 name={product.name}
                 price={product.price}

@@ -1,0 +1,122 @@
+.product__details {
+	margin-inline: 162px;
+	margin-block: 32px;
+}
+
+.product__details__info,
+.product__details__description {
+	display: flex;
+	justify-content: center;
+	gap: 42px;
+	margin-block-end: 64px;
+}
+
+.product__details .detail-image {
+	width: 528px;
+}
+
+.description-text {
+	width: 546px;
+}
+
+.product__details__card {
+	width: 528px;
+	border-radius: 20px;
+	box-shadow: 0px 4.5px 66.7px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product__details__card h4 {
+	font-family: DM Sans;
+	font-weight: 700;
+	font-size: 1.5em;
+	line-height: 134%;
+}
+
+.product__details__card h5 {
+	font-family: 'Inter';
+	color: var(--dark-grey);
+	font-weight: 400;
+	font-size: 1.250em;
+	margin-block: 0.375em 0.875em;
+}
+
+.product__details__card .price {
+	font-family: DM Sans, sans-serif;
+	font-size: 1.5em;
+	font-weight: 500;
+	line-height: 134%;
+	letter-spacing: -0.5px;
+}
+
+.product__details__info__basic {
+	border-bottom: 1px solid var(--line-light-grey);
+	padding: 36px 36px 32px;
+}
+
+.product__details__info__quantity {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 270px;
+	padding: 32px 36px 36px;
+}
+
+.product__details__info__quantity h6 {
+	font-family: DM Sans, sans-serif;
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin-block-end: 16px;
+}
+
+.quantity-buttons {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 12px 16px;
+	border-radius: 18px;
+	border: 1px solid var(--line-light-grey);
+	max-width: 136px;
+	gap: 16px;
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 134%;
+}
+
+.quantity-buttons button {
+	border: none;
+	padding: 0;
+}
+
+.product__details__info__quantity .cart-button {
+	display: block;
+	padding: 20px 80px;
+	background-color: var(--black);
+	color: var(--white);
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 111.12%;
+}
+
+.description-text {
+	color: var(--dark-grey, #67696E);
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 134%;
+}
+
+.description-text p, ul {
+	margin-block-start: 18px;
+}
+
+.description-text h4 {
+	color: var(--black);
+	border-bottom: 1px solid var(--line-light-grey);
+	font-family: DM Sans;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 200%;
+	letter-spacing: -0.5px;
+}

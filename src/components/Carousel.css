@@ -1,7 +1,16 @@
 .carousel img {
-	width: fit-content;
+	width: 546px;
 }
 
 .carousel button {
 	border: none;
+	padding: 0.25rem;
+	border-radius: 50%;
+	box-shadow: 0px 0px 140px 0px rgba(0, 0, 0);
+}
+
+.carousel .buttons {
+	display: flex;
+	margin-block-start: 28px;
+	justify-content: space-around;
 }

@@ -14,14 +14,22 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     };
 
     const prevImage = () => {
-        setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
+        setCurrentImageIndex(
+            (currentImageIndex - 1 + images.length) % images.length
+        );
     };
 
     return (
         <div className='carousel'>
             <img src={images[currentImageIndex]} alt='carousel' />
-            <button onClick={prevImage}><Icon icon='chevronLeft' /></button>
-            <button onClick={nextImage}><Icon icon='chevronRight' /></button>
+            <div className='buttons'>
+                <button onClick={prevImage}>
+                    <Icon icon='chevronLeft' />
+                </button>
+                <button onClick={nextImage}>
+                    <Icon icon='chevronRight' />
+                </button>
+            </div>
         </div>
     );
 };
