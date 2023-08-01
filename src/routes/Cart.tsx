@@ -48,7 +48,7 @@ const Cart: React.FC = () => {
         return (
             <div className='cart'>
                 <div className='your-cart'>
-                    <h2>Your Bag:</h2>
+                    <h2>Your Bag</h2>
                     {cartItems.map((item) => (
                         <div key={item.product.id} className='item'>
                             <div className='item__picture'>
@@ -57,48 +57,75 @@ const Cart: React.FC = () => {
                                     alt={item.product.name}
                                 />
                             </div>
-                            <div className='info'>
-                                <div className='name-brand'>
-                                    <h4>{item.product.brand}</h4>
-                                    <h5>{item.product.name}</h5>
+                            <div className='item__summary'>
+                                <div className='info'>
+                                    <div className='name-brand'>
+                                        <h4>{item.product.brand}</h4>
+                                        <h5>{item.product.name}</h5>
+                                    </div>
+                                    <h4 className='price'>
+                                        ${item.product.price}
+                                    </h4>
                                 </div>
-                                <h4 className='price'>${item.product.price}</h4>
-                            </div>
-                            <div className='buttons'>
-                                <button
-                                    onClick={() =>
-                                        decreaseQuantity(item.product.id)
-                                    }
-                                >
-                                    <Icon icon='minus' />
-                                </button>
-                                {item.quantity}
-                                <button
-                                    onClick={() =>
-                                        increaseQuantity(item.product.id)
-                                    }
-                                >
-                                    <Icon icon='plus' />
-                                </button>
-                                <button
-                                    onClick={() => removeItem(item.product.id)}
-                                >
-                                    Remove
-                                </button>
+                                <div className='buttons'>
+                                    <div className='quantity-buttons'>
+                                        <button
+                                            onClick={() =>
+                                                decreaseQuantity(
+                                                    item.product.id
+                                                )
+                                            }
+                                        >
+                                            <Icon icon='minus' />
+                                        </button>
+                                        {item.quantity}
+                                        <button
+                                            onClick={() =>
+                                                increaseQuantity(
+                                                    item.product.id
+                                                )
+                                            }
+                                        >
+                                            <Icon icon='plus' />
+                                        </button>
+                                    </div>
+                                    <div className='remove-button'>
+                                        <button
+                                            onClick={() =>
+                                                removeItem(item.product.id)
+                                            }
+                                        >
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
                 <div className='summary'>
-                    <h2>Summary</h2>
-                    <h4>Total items: {totalItems}</h4>
-                    <h4>Subtotal: ${subtotal.toFixed(2)}</h4>
-                    <h4>
-                        Shipping & Delivery: ${shippingAndDelivery.toFixed(2)}
-                    </h4>
-                    <h4>Tax: ${tax.toFixed(2)}</h4>
-                    <h4>Total: ${total.toFixed(2)}</h4>
-                    <button>Checkout</button>
+                    <div className='summary__card'>
+                        <h2>Summary</h2>
+                        <div className='summary__money'>
+                            <div className='summary__money__title'>
+                                <h4>Subtotal</h4>
+                                <h4>Shipping and delivery</h4>
+                                <h4>Tax</h4>
+                            </div>
+                            <div className='summary__money__cost'>
+                                <h4>${subtotal.toFixed(2)}</h4>
+                                <h4>${shippingAndDelivery.toFixed(2)}</h4>
+                                <h4>${tax.toFixed(2)}</h4>
+                            </div>
+                        </div>
+                        <div className='checkout'>
+                            <div className='total-cost'>
+                                <h4 className='total'>Total</h4>
+                                <h4 className='cost'>${total.toFixed(2)}</h4>
+                            </div>
+                            <button>Checkout<Icon icon='arrowRight'/></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

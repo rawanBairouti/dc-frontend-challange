@@ -65,3 +65,7 @@ a {
 #root {
   isolation: isolate;
 }
+
+button:hover {
+  cursor: pointer;
+}

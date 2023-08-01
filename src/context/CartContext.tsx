@@ -21,8 +21,11 @@ interface CartContextType {
     removeItem: (productId: number) => void;
 }
 
+const storedCartItems = localStorage.getItem('cartItems');
+const initialCartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
 const CartContext = createContext<CartContextType>({
-    cartItems: [],
+    cartItems: initialCartItems,
     totalItems: 0,
     addItem: () => {},
     incrementQuantity: () => {},
@@ -36,8 +39,9 @@ const cartReducer = (state: CartItem[], action: CartAction) => {
             const existingItem = state.find(
                 (item) => item.product.id === action.payload.product.id
             );
+
             if (existingItem) {
-                return state.map((item) =>
+                const updatedState = state.map((item) =>
                     item.product.id === action.payload.product.id
                         ? {
                               ...item,
@@ -45,14 +49,18 @@ const cartReducer = (state: CartItem[], action: CartAction) => {
                           }
                         : item
                 );
+                localStorage.setItem('cartItems', JSON.stringify(updatedState));
+                return updatedState;
             } else {
-                return [
+                const updatedState = [
                     ...state,
                     {
                         product: action.payload.product,
                         quantity: action.payload.quantity,
                     },
                 ];
+                localStorage.setItem('cartItems', JSON.stringify(updatedState));
+                return updatedState;
             }
         case 'INCREMENT_QUANTITY':
             return state.map((item) =>
@@ -74,10 +82,9 @@ const cartReducer = (state: CartItem[], action: CartAction) => {
 };
 
 function CartProvider({ children }: { children: React.ReactNode }) {
-    const [cartItems, dispatch] = useReducer(cartReducer, []);
+    const [cartItems, dispatch] = useReducer(cartReducer, initialCartItems);
 
     useEffect(() => {
-        // Optional: You can save the cartItems to localStorage for persistence
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
 

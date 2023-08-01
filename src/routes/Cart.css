@@ -1,7 +1,7 @@
 .your-cart img {
-	/* width: 165px; */
-	height: 166px;
 	border-radius: 18px;
+	width: 165px;
+	height: 166px;
 }
 
 .empty-cart {
@@ -46,8 +46,169 @@
 .your-cart {
 	display: flex;
 	flex-direction: column;
+	width: 582px;
+}
+
+.your-cart h2 {
+	font-family: DM Sans;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 134%;
+	letter-spacing: -1px;
 }
 
 .item {
 	display: flex;
+	gap: 32px;
+	padding-block: 32px;
+	border-bottom: 1px solid var(--line-light-grey);
+}
+
+.item__picture {
+	width: 165px;
+	height: 166px;
+}
+
+.item__summary {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	flex-grow: 1;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.summary {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.summary__card {
+	font-family: DM Sans;
+	padding: 36px;
+	width: 460px;
+	border-radius: 20px;
+	box-shadow: 0px 4.5px 66.676px 0px rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+}
+
+.summary h2 {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 134%;
+	letter-spacing: -1px;
+	margin-block-end: 32px;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.remove-button button {
+	color: var(--dark-grey);
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 150%;
+	border: none;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.your-cart h4 {
+	font-family: DM Sans;
+	font-weight: 700;
+	font-size: 1.250em;
+	line-height: 120%;
+}
+
+.your-cart h5 {
+	font-family: 'Inter';
+	color: var(--dark-grey);
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.your-cart .price {
+	font-family: DM Sans;
+	font-size: 1.125em;
+	font-weight: 500;
+	line-height: 134%;
+	letter-spacing: -0.5px;
+}
+
+.summary__money {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	border-bottom: 1px solid var(--line-light-grey);
+	margin-block-end: 32px;
+	padding-block-end: 32px;
+}
+
+.summary__money__title h4 {
+	font-family: DM Sans;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: -0.5px;
+}
+
+.summary__money__cost h4 {
+	font-family: DM Sans;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: -0.5px;
+}
+
+.summary__money__title,
+.summary__money__cost {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.summary__money__cost {
+	align-items: flex-end;
+}
+
+.checkout {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.total-cost {
+	display: flex;
+	justify-content: space-between;
+	font-family: DM Sans, sans-serif;
+}
+
+.total {
+	font-size: 24px;
+}
+
+.cost {
+	font-size: 18px;
+	font-weight: 500;
+	align-self: center;
+}
+
+.checkout button {
+	padding: 20px 80px;
+	background-color: var(--black);
+	color: var(--white);
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 111.12%;
+	justify-content: center;
 }
