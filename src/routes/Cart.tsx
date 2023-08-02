@@ -49,8 +49,7 @@ const Cart: React.FC = () => {
                         <div key={item.product.id} className='item'>
                             <div className='item__picture'>
                                 <img
-                                    // src={item.product.mainImage}
-                                    src={`http://localhost:3000/${item.product.mainImage}`}
+                                    src={item.product.mainImage}
                                     alt={item.product.name}
                                 />
                             </div>

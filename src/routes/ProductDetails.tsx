@@ -12,9 +12,6 @@ function ProductDetail() {
         return null;
     }
 
-    const getAbsoluteImageUrl = (relativePath: string) =>
-        `http://localhost:3000/${relativePath}`;
-
     const [quantity, setQuantity] = useState(1);
     const { addItem } = useContext(CartContext);
 
@@ -24,9 +21,6 @@ function ProductDetail() {
         fetch(`http://127.0.0.1:3000/api/products/${id}`)
             .then((response) => response.json())
             .then((data) => {
-                // Convert relative image paths to absolute URLs
-                data.detailImage = getAbsoluteImageUrl(data.detailImage);
-                data.carouselImages = data.carouselImages.map(getAbsoluteImageUrl);
                 setProduct(data);
             })
             .catch((error) =>

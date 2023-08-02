@@ -8,26 +8,26 @@ app.use(express.static(path.join(__dirname, 'src')));
 app.use(express.json());
 app.use(cors());
 
-const product1 = './assets/product1.png';
-const product1a = './assets/product1a.png';
-const product1b = './assets/product1b.png';
-const product1c = './assets/product1c.png';
-const product1d = './assets/product1d.png';
-const product2 = './assets/product2.png';
-const product2a = './assets/product2a.png';
-const product2b = './assets/product2b.png';
-const product2c = './assets/product2c.png';
-const product2d = './assets/product2d.png';
-const product3 = './assets/product3.png';
-const product3a = './assets/product3a.png';
-const product3b = './assets/product3b.png';
-const product3c = './assets/product3c.png';
-const product3d = './assets/product3d.png';
-const product4 = './assets/product4.png';
-const product4a = './assets/product4a.png';
-const product4b = './assets/product4b.png';
-const product4c = './assets/product4c.png';
-const product4d = './assets/product4d.png';
+const product1 = 'http://localhost:3000/assets/product1.png';
+const product1a = 'http://localhost:3000/assets/product1a.png';
+const product1b = 'http://localhost:3000/assets/product1b.png';
+const product1c = 'http://localhost:3000/assets/product1c.png';
+const product1d = 'http://localhost:3000/assets/product1d.png';
+const product2 = 'http://localhost:3000/assets/product2.png';
+const product2a = 'http://localhost:3000/assets/product2a.png';
+const product2b = 'http://localhost:3000/assets/product2b.png';
+const product2c = 'http://localhost:3000/assets/product2c.png';
+const product2d = 'http://localhost:3000/assets/product2d.png';
+const product3 = 'http://localhost:3000/assets/product3.png';
+const product3a = 'http://localhost:3000/assets/product3a.png';
+const product3b = 'http://localhost:3000/assets/product3b.png';
+const product3c = 'http://localhost:3000/assets/product3c.png';
+const product3d = 'http://localhost:3000/assets/product3d.png';
+const product4 = 'http://localhost:3000/assets/product4.png';
+const product4a = 'http://localhost:3000/assets/product4a.png';
+const product4b = 'http://localhost:3000/assets/product4b.png';
+const product4c = 'http://localhost:3000/assets/product4c.png';
+const product4d = 'http://localhost:3000/assets/product4d.png';
 
 const products = [
     {

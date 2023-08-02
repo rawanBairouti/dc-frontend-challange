@@ -25,8 +25,7 @@ export default function Products() {
             <Product
                 key={product.name}
                 id={product.id}
-                mainImage={`http://localhost:3000/${product.mainImage}`}
-                // mainImage={product.mainImage}
+                mainImage={product.mainImage}
                 brand={product.brand}
                 name={product.name}
                 price={product.price}
