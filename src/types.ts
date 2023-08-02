@@ -1,10 +1,11 @@
 interface Product {
 	id: number;
-    carouselImage?: string[];
+    carouselImages?: string[];
     mainImage: string;
     brand: string;
     name: string;
     price: number;
+    detailImage?: string;
 }
 
 export type { Product };

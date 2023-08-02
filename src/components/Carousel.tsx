@@ -3,11 +3,13 @@ import './Carousel.css';
 import Icon from './Icon';
 
 interface CarouselProps {
-    images: string[];
+    images?: string[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    if (!images) return null;
 
     const nextImage = () => {
         setCurrentImageIndex((currentImageIndex + 1) % images.length);

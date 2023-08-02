@@ -1,7 +1,6 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Carousel from '../components/Carousel';
-import products from '../data/products';
 import Icon from '../components/Icon';
 import { CartContext } from '../context/CartContext';
 import { Product } from '../types';
@@ -13,13 +12,28 @@ function ProductDetail() {
         return null;
     }
 
-    const product = products.find((product) => product.id == Number(id));
-    if (!product) {
-        console.log('no product found');
-        return null;
-    }
+    const getAbsoluteImageUrl = (relativePath: string) =>
+        `http://localhost:3000/${relativePath}`;
+
     const [quantity, setQuantity] = useState(1);
     const { addItem } = useContext(CartContext);
+
+    const [product, setProduct] = useState<Product>();
+
+    useEffect(() => {
+        fetch(`http://127.0.0.1:3000/api/products/${id}`)
+            .then((response) => response.json())
+            .then((data) => {
+                // Convert relative image paths to absolute URLs
+                data.detailImage = getAbsoluteImageUrl(data.detailImage);
+                data.carouselImages = data.carouselImages.map(getAbsoluteImageUrl);
+                setProduct(data);
+            })
+            .catch((error) =>
+                console.error('Error fetching product details:', error)
+            );
+    }, [id]);
+    if (!product) return null;
 
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
@@ -34,10 +48,11 @@ function ProductDetail() {
 
     const addToCart = () => {
         // create a new item object to represent this product
-        let item: Product = { ...product};
+        let item: Product = { ...product };
         addItem(item, quantity);
-        console.log('add to cart');
     };
+
+    if (!product.carouselImages) return null;
 
     return (
         <div className='product__details'>

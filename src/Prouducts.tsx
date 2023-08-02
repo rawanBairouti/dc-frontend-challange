@@ -1,11 +1,20 @@
+import { useState, useEffect } from 'react';
 import Product from './components/Product';
-import products from './data/products';
 import './Products.css';
 
 export default function Products() {
     
+    const [products, setProducts] = useState([]);
 
-	const productsArray = products.map(
+    useEffect(() => {
+        fetch('http://127.0.0.1:3000/api/products') // Fetch products from the server
+            .then((response) => response.json())
+            .then((data) => setProducts(data))
+            .catch((error) => console.error('Error fetching products:', error));
+    }, []);
+
+
+    const productsArray = products.map(
         (product: {
             id: number;
             name: string;
@@ -16,7 +25,8 @@ export default function Products() {
             <Product
                 key={product.name}
                 id={product.id}
-                mainImage={product.mainImage}
+                mainImage={`http://localhost:3000/${product.mainImage}`}
+                // mainImage={product.mainImage}
                 brand={product.brand}
                 name={product.name}
                 price={product.price}

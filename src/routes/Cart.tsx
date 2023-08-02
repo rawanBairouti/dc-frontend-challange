@@ -14,25 +14,21 @@ const Cart: React.FC = () => {
     } = useContext(CartContext);
 
     const increaseQuantity = (id: number) => {
-        console.log('incrementing item:', id);
         incrementQuantity(id);
     };
 
     const decreaseQuantity = (id: number) => {
-        console.log('decrementing item:', id);
         decrementQuantity(id);
     };
 
     const subtotal = cartItems.reduce(
-        (total, item) => total + item.product.price * item.quantity,
-        0
-    );
+        (total, item) => total + item.product.price * item.quantity, 0);
 
     const tax = subtotal * 0.1; // 10% tax
     const shippingAndDelivery = 5; // flat rate shipping
     const total = subtotal + tax + shippingAndDelivery;
 
-    const navigate = useNavigate();
+    const navigate = useNavigate();    
 
     if (totalItems === 0) {
         return (
@@ -53,7 +49,8 @@ const Cart: React.FC = () => {
                         <div key={item.product.id} className='item'>
                             <div className='item__picture'>
                                 <img
-                                    src={item.product.mainImage}
+                                    // src={item.product.mainImage}
+                                    src={`http://localhost:3000/${item.product.mainImage}`}
                                     alt={item.product.name}
                                 />
                             </div>
@@ -123,7 +120,10 @@ const Cart: React.FC = () => {
                                 <h4 className='total'>Total</h4>
                                 <h4 className='cost'>${total.toFixed(2)}</h4>
                             </div>
-                            <button>Checkout<Icon icon='arrowRight'/></button>
+                            <button>
+                                Checkout
+                                <Icon icon='arrowRight' />
+                            </button>
                         </div>
                     </div>
                 </div>
